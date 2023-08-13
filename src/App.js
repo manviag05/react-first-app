@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Mycomponenets/Header';
-import 
+import Todos from './Mycomponenets/Todos';
+import Footer from './Mycomponenets/Footer';
 
 function App() {
-const onDelete=()=>{
-  console.log("i am delete of todo","todo");
+const onDelete=(todo)=>{
+  console.log("i am delete of todo",todo);
 }
 
 let todos=[
@@ -23,7 +24,7 @@ let todos=[
     sno:3,
     title:"go to store",
     desc:"you have to go store"
-  },
+  }
 ]
 
 
@@ -31,7 +32,7 @@ let todos=[
     <>
     <Header title="my todo list" searchBar={false} />
     <Footer />
-    <Todos todo={todo} onDelete={onDelete}/>
+    <Todos todos={todos} onDelete={onDelete}/>
    
     </>
   );
