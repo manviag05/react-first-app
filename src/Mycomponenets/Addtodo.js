@@ -11,7 +11,11 @@ const submit=(e)=>{
     if(!title || !desc){
         alert("title or desc cant be empty");
     }
-    addTodo(title,desc);
+    else {
+        addTodo(title,desc);
+        setTitle("");
+        setDesc("");
+    }
 }
 
   return (
